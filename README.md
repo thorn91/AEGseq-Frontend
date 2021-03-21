@@ -13,7 +13,15 @@ information back up to JS to display in the GUI.
 
 ## Installation & Running
 
+### Installation 
+
 From within the main AEGseq directory:
 
 `pip install -r requirements.txt` - install Python requirements
+
+### Running
+
+From within the main AEGseq directory:
+
+`python server.py`
 

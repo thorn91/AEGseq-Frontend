@@ -5,6 +5,7 @@ eel.init('web')
 
 @eel.expose
 def parse_input_file(filename):
+	print(filename)
 	print_input_file(filename)
 
 

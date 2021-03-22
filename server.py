@@ -25,4 +25,4 @@ def print_input_file(filename):
 
 
 if __name__ == "__main__":
-	eel.start('main.html')
+	eel.start('main.html', mode='')

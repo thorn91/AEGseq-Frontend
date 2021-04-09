@@ -5,7 +5,6 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
       maxHeight: {
         '0': '0',
         '1/4': '25%',
@@ -13,11 +12,11 @@ module.exports = {
         '3/4': '75%',
         'full': '100%',
        }
-    },
-
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

@@ -1,89 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./static/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./static/style.css">
   <script type="text/javascript" src="eel.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-	<title></title>
+  <title></title>
 </head>
+
 <body>
-	<div class="bg-gray-800 py-4">
-		<div class="container px-6 mx-auto flex flex-col md:flex-row items-start lg:items-center justify-between">
-			<div>
-				<h4 class="text-2xl font-bold leading-tight text-white">AEGseq 2.0</h4>
-			</div>
-			<div class="mt-6 md:mt-0">
-				<button class="mr-3 bg-transparent focus:outline-none transition duration-150 ease-in-out rounded hover:bg-gray-700 text-white px-5 py-2 text-sm border border-white">About</button>
-			</div>
-		</div>
-	</div>
+  <nav class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block lg:hidden h-8 w-auto" src="./assets/logo.png" alt="Workflow">
+            <img class="hidden lg:block h-8 w-auto" src="./assets/logo.png" alt="Workflow">
+          </div>
+          <div class="flex-shrink-0 flex items-center">
+            <h1 class="text-lg tracking-tight font-extrabold text-gray-100 sm:text-xl md:text-xl">
+              <span class="xl:inline">AEG</span><span class="text-indigo-400">seq</span>
+            </h1>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+              <a href="http://aspendb.uga.edu" target="_blank"
+                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Tsai Lab</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </nav>
 
-<div class="pb-5 border-b border-gray-200 mt-10 ml-24 mr-24">
-  <h3 class="text-lg leading-6 font-medium text-gray-900">
-    Sequences
-  </h3>
-</div>
+  <!-- Sequence -->
+  <div class="m-4 sm:mt-8 sm:ml-12 sm:mr-12 space-y-8 divide-y divide-gray-200">
+    <div>
+      <div>
+        <h3 class="text-lg leading-6 font-medium text-gray-900">
+          Sequences
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has
+        </p>
+      </div>
 
-<script type=text/javascript>
-  eel.python_func("Hello!")
-</script>
-<div class="flex ml-28 mr-28 mt-5 h-44">
-  <div class="w-1/4 mr-2">
-    <div class="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200 h-60">
-      <div class="px-4 py-5 sm:px-6">
-        <p class="text-md font-semibold text-gray-700 text-center">Upload Sequence File</p>
+      <!-- Sequence File Upload -->
+      <div class="mt-6  flex justify-between sm:mt-8">
+        <div class="mt-3 mb-3">
+          <input type="file" id="target-file-upload" hidden />
+          <label
+            class="bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-800 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            for="target-file-upload">Upload Target File(s)</label>
+        </div>
+        <img class="" style="max-width:50%; min-width:50%" src="./assets/flowchart.png" alt="">
       </div>
-      <div class="px-3 py-4 sm:p-5">
-        <p class="text-sm text-gray-700">Instructions about this go here and can be wider if necessary etc</p>
-      </div>
-        <label class="flex flex-col items-center m-2 bg-white text-blue tracking-wide cursor-pointer hover:bg-gray-200 rounded">
-            <svg class="w-5 h-5 m-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-            </svg>
-            <span class="mt-2 text-sm leading-normal">Select Sequence File</span>
-            <input id="sequence-file-name" type='file' class="hidden" />
-        </label>
-    </div>
-  </div>  <div class="w-3/4 ml-2 flex justify-items-center">
-    <img class="h-44" src="./assets/flowchart.png" alt="">
-    <img class="h-44" src="./assets/flowchart.png" alt="">
-    <img class="h-44" src="./assets/flowchart.png" alt="">
-  </div>
-</div>
-
-<div class="pb-5 border-b border-gray-200 mt-28 ml-24 mr-24">
-  <h3 class="text-lg leading-6 font-medium text-gray-900">
-    Target
-  </h3>
-</div>
-<div class="flex ml-28 mr-28 mt-5 h-60">
-  <div class="w-1/4 mr-2">
-    <div class="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200 h-60">
-      <div class="px-4 py-5 sm:px-6">
-        <p class="text-md font-semibold text-gray-700 text-center">Upload Target File</p>
-      </div>
-      <div class="px-3 py-4 sm:p-5">
-        <p class="text-sm text-gray-700">Instructions about this go here and can be wider if necessary etc</p>
-      </div>
-        <label class="flex flex-col items-center m-2 bg-white text-blue tracking-wide cursor-pointer hover:bg-gray-200 rounded">
-            <svg class="w-5 h-5 m-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-            </svg>
-            <span class="mt-2 text-sm leading-normal">Select Target File</span>
-            <input id="target-file-name" type='file' class="hidden" onchange="call_parse_input_file()"/>
-        </label>
     </div>
   </div>
-  <div class="w-3/4 ml-5 h-44">
-    <div class="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200 rounded h-60">
-      <textarea id="input-display" name="input-display" class="m-3 text-xs font-light font-mono border-none outline-none focus:border-none focus:outline-none resize-none overflow-y-auto" cols=100 rows="13" readonly>
-      </textarea>
+
+  <!-- Target -->
+  <div class="m-4 sm:mt-8 sm:ml-12 sm:mr-12 space-y-8 divide-y divide-gray-200">
+    <div>
+      <div>
+        <h3 class="text-lg leading-6 font-medium text-gray-900">
+          Target
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has
+        </p>
+      </div>
+
+      <!-- Target File Upload -->
+      <div class="mt-6 sm:mt-8">
+        <div class="mt-3 mb-3">
+          <input type="file" id="target-file-upload" hidden />
+          <label
+            class="bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-800 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            for="target-file-upload">Upload Target File(s)</label>
+        </div>
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+          <div class="px-4 py-5 sm:px-6">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">
+              Target Files Information
+            </h3>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500">
+              Not sure exactly what to put here, depends on the files.
+            </p>
+          </div>
+          <div class="border-t border-gray-200">
+            <dl>
+              <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-500">
+                  Total Files:
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  3
+                </dd>
+              </div>
+              <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-500">
+                  Total Size:
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  300gb
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Parameters -->
+  <div class="m-4 sm:mt-8 sm:ml-12 sm:mr-12 space-y-8 divide-y divide-gray-200">
+    <div>
+      <div>
+        <h3 class="text-lg leading-6 font-medium text-gray-900">
+          Parameters
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has
+        </p>
+      </div>
+    </div>
+
+    <form class="space-y-8 divide-y divide-gray-200">
+      <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
+        <div>
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+            BLAT Parameters
+          </h3>
+          <p class="mt-1 max-w-2xl text-sm text-gray-500">
+            Info about BLAT.
+          </p>
+        </div>
+
+        <div class="space-y-6 sm:space-y-5">
+          <div class="sm:grid sm:grid-cols-3 sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            <label for="READ_SNP_MINR_FREQ" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              READ_SNP_MINR_FREQ
+            </label>
+            <div class="mt-1 sm:mt-0 sm:col-span-2">
+              <input type="text" name="READ_SNP_MINR_FREQ" id="READ_SNP_MINR_FREQ" size="7" maxlength="7" value="0.05"
+                placeholder="0.05"
+                class="max-w-lg block w-16 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divide-y divide-gray-200 pt-8 space-y-6 sm:pt-10 sm:space-y-5">
+        <div>
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+            Non-Blat Parameters
+          </h3>
+        </div>
+        <div class="space-y-6 sm:space-y-5 divide-y divide-gray-200">
+          <div class="pt-6 sm:pt-5">
+            <div role="group" aria-labelledby="label-email">
+              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+                <div>
+                  <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700" id="label-email">
+                    Param Type 1
+                  </div>
+                </div>
+                <div class="mt-4 sm:mt-0 sm:col-span-2">
+                  <div class="max-w-lg space-y-4">
+                    <div class="relative flex items-start">
+                      <div class="flex items-center h-5">
+                        <input id="comments" name="comments" type="checkbox"
+                          class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                      </div>
+                      <div class="ml-3 text-sm">
+                        <label for="comments" class="font-medium text-gray-700">Param 1</label>
+                        <p class="text-gray-500">Param 1 info.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="relative flex items-start">
+                        <div class="flex items-center h-5">
+                          <input id="candidates" name="candidates" type="checkbox"
+                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        </div>
+                        <div class="ml-3 text-sm">
+                          <label for="candidates" class="font-medium text-gray-700">Param 2</label>
+                          <p class="text-gray-500">Param 2 info.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="relative flex items-start">
+                        <div class="flex items-center h-5">
+                          <input id="offers" name="offers" type="checkbox"
+                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        </div>
+                        <div class="ml-3 text-sm">
+                          <label for="offers" class="font-medium text-gray-700">Param 3</label>
+                          <p class="text-gray-500">Param 3 info</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="pt-5">
+    <div class="flex justify-end">
+      <button type="button"
+        class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Cancel
+      </button>
+      <button type="submit"
+        class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Save
+      </button>
+    </div>
+  </div>
+  </form>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Facebook</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-base text-gray-400">
+          &copy; Tsai Lab License or whatever information can go here..
+        </p>
+      </div>
+    </div>
+  </footer>
+
 </body>
-<!-- <script src="js/main.js"></script> -->
+
 </html>
